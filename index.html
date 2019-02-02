@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      padding: 1em;
+      border: solid 1px black;
+      border-top: none;
+      text-align: center;
+    }
+    li:first-of-type {
+      border-top: solid 1px black;
+    }
+    .buttons {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+    .buttons > * {
+      display: block;
+      background: white;
+      border: solid 1px black;
+      padding: 1em 2em;
+      cursor: pointer;
+    }
+    .ficha_personaje{
+      display: none;
+    }
+  </style>
+</head>
+<body>
+    <script>
+       
+        function clickNombre(elem_selecc){
+          //alert(elem_selecc.id);
+          if(document.getElementById("ficha_personaje_"+elem_selecc.id).style.display == "block"){
+            document.getElementById("ficha_personaje_"+elem_selecc.id).style.display = "none";
+          }
+          else{
+            document.getElementById("ficha_personaje_"+elem_selecc.id).style.display = "block";
+          }
+          
+         
+        }
+      </script>
+  <div id="app">
+    <ul></ul>
+    <div class="buttons">
+      <button id="prev">Prev</button>
+      <button id="next">Next</button>
+    </div>
+  </div>
+</body>
+</html>
